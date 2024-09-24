@@ -114,4 +114,3 @@ NexTrade is licensed under the MIT License. You are free to use, modify, and dis
 
 We thank the open-source community for providing the tools and libraries that made NexTrade possible, including Flask, Solidity, Web3.py, and Ethereum.
 
-
