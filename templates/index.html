@@ -6,18 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexTrade</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
 </head>
 <body>
     <h1>Welcome to NexTrade</h1>
+
+    <!-- MetaMask Connection -->
+    <button id="connectWalletBtn">Connect MetaMask</button>
+    <p id="walletAddress"></p>
+
     <form id="addStockForm">
-        <input type="text" name="name" placeholder="Stock Name">
-        <input type="number" name="price" placeholder="Stock Price">
+        <input type="text" name="name" placeholder="Stock Name" required>
+        <input type="number" name="price" placeholder="Stock Price" required>
         <button type="submit">Add Stock</button>
     </form>
 
     <form id="buyStockForm">
-        <input type="text" name="name" placeholder="Stock Name">
+        <input type="text" name="name" placeholder="Stock Name" required>
         <button type="submit">Buy Stock</button>
     </form>
+
+    <script>
+        let web3;
+        let userAccount;
+
+        // Check if MetaMask is installed
+        window.addEventListener('load', async () => {
+            if (typeof window.ethereum !== 'undefined') {
+                web3 = new Web3(window.ethereum);
+                console.log("MetaMask is installed!");
+            } else {
+                alert("Please install MetaMask to use this feature.");
+            }
+        });
+
+        // Connect to MetaMask wallet
+        document.getElementById('connectWalletBtn').addEventListener('click', async () => {
+            try {
+                const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                userAccount = accounts[0];
+                document.getElementById('walletAddress').textContent = `Connected to : ${userAccount}`;
+            } catch (error) {
+                console.error("User denied account access.");
+            }
+        });
+    </script>
 </body>
 </html>
