@@ -6,25 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexTrade</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            margin: 5px 0;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #walletAddress {
+            margin-top: 10px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to NexTrade</h1>
 
-    <!-- MetaMask Connection -->
+    <!-- MetaMask Wallet Section -->
     <button id="connectWalletBtn">Connect MetaMask</button>
-    <p id="walletAddress"></p>
+    <p id="walletAddress">Not connected</p>
 
+    <!-- Stock Forms -->
     <form id="addStockForm">
+        <h2>Add Stock</h2>
         <input type="text" name="name" placeholder="Stock Name" required>
         <input type="number" name="price" placeholder="Stock Price" required>
         <button type="submit">Add Stock</button>
     </form>
 
     <form id="buyStockForm">
+        <h2>Buy Stock</h2>
         <input type="text" name="name" placeholder="Stock Name" required>
         <button type="submit">Buy Stock</button>
     </form>
+
+    <!-- New Actions -->
+    <div class="button-group">
+        <button id="viewOwnershipBtn">View Ownership</button>
+        <button id="sellStockBtn">Sell Stock</button>
+    </div>
 
     <script>
         let web3;
@@ -45,10 +115,35 @@
             try {
                 const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
                 userAccount = accounts[0];
-                document.getElementById('walletAddress').textContent = `Connected to : ${userAccount}`;
+                document.getElementById('walletAddress').textContent = `Connected to: ${userAccount}`;
             } catch (error) {
                 console.error("User denied account access.");
             }
+        });
+
+        // Handle form submissions
+        document.getElementById('addStockForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const stockName = event.target.name.value;
+            const stockPrice = event.target.price.value;
+            console.log(`Adding Stock: ${stockName}, Price: ${stockPrice}`);
+            alert('Stock added successfully!');
+        });
+
+        document.getElementById('buyStockForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const stockName = event.target.name.value;
+            console.log(`Buying Stock: ${stockName}`);
+            alert('Stock purchased successfully!');
+        });
+
+        // Button actions
+        document.getElementById('viewOwnershipBtn').addEventListener('click', () => {
+            alert('Feature not implemented yet!');
+        });
+
+        document.getElementById('sellStockBtn').addEventListener('click', () => {
+            alert('Feature not implemented yet!');
         });
     </script>
 </body>
