@@ -1,5 +1,6 @@
 ## **Introduction**
 
+
 **NexTrade** is a cutting-edge decentralized stock trading application tailored for the Indian financial markets. Built on blockchain technology, it introduces a secure, transparent, and tamper-proof platform for trading stocks. By leveraging **Ethereum** smart contracts, NexTrade enables users to trade stocks directly with each other in a peer-to-peer fashion, eliminating the need for intermediaries such as stockbrokers or traditional exchanges.
 
 The decentralized nature of the application ensures the security and immutability of trades while providing a transparent method to track stock ownership. The core philosophy behind NexTrade is to showcase how blockchain technology can revolutionize the financial markets in India, providing a more secure, trustless, and efficient system.
