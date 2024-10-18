@@ -230,7 +230,7 @@ NexTrade is an open-source project, and contributions are welcome. To contribute
 
 ## **License**
 
-NexTrade is distributed under the **MIT License**. You are free to use, modify, and distribute the software under the terms specified in the `LICENSE` file.
+NexTrade is distributed under the **MIT License**. You are free to use, modify, and distribute the software under the terms specified in the LICENSE file [MIT License](LICENSE)
 
 ---
 
