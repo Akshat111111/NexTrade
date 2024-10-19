@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexTrade</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,6 +67,7 @@
             justify-content: center;
             gap: 10px;
         }
+
         .gtranslate_wrapper{
             position:absolute;
             bottom:30px;
@@ -91,6 +92,69 @@
     defer
   ></script>
     
+
+
+#toggleBtn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fa-sun {
+    color: #ffb300;
+}
+
+.fa-moon {
+    color: #3f51b5;
+}
+
+.active {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.night-mode {
+    background-color: #333;
+}
+
+.night-mode #toggleBtn {
+    background-color: #555;
+}
+
+.night-mode .active {
+    background-color: #777;
+}
+    </style>
+</head>
+<body>
+   
+</head>
+
+<body>
+    <button id="toggleBtn">
+        <div class="icon-container active" id="sunContainer">
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="icon-container" id="moonContainer">
+            <i class="fas fa-moon"></i>
+        </div>
+    </button>
+
     <h1>Welcome to NexTrade</h1>
 
     <!-- MetaMask Wallet Section -->
@@ -166,6 +230,18 @@
         document.getElementById('sellStockBtn').addEventListener('click', () => {
             alert('Feature not implemented yet!');
         });
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+        const sunContainer = document.getElementById('sunContainer');
+        const moonContainer = document.getElementById('moonContainer');
+
+        toggleBtn.addEventListener('click', () => {
+         body.classList.toggle('night-mode');
+         sunContainer.classList.toggle('active');
+         moonContainer.classList.toggle('active');
+        });
+
+            
     </script>
     <script>
         window.embeddedChatbotConfig = {
