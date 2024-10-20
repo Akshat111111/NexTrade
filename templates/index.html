@@ -68,6 +68,32 @@
             gap: 10px;
         }
 
+        .gtranslate_wrapper{
+            position:absolute;
+            bottom:30px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gtranslate_wrapper"></div>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: ".gtranslate_wrapper",
+        flags: true,
+        flag_size:24,
+        font_size:0,
+      };
+    </script>
+    <script
+    src="https://cdn.gtranslate.net/widgets/latest/popup.js"
+    defer
+  ></script>
+    
+
+
 #toggleBtn {
     background-color: #f0f0f0;
     border: none;
@@ -128,6 +154,7 @@
             <i class="fas fa-moon"></i>
         </div>
     </button>
+
     <h1>Welcome to NexTrade</h1>
 
     <!-- MetaMask Wallet Section -->
