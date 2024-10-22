@@ -1,4 +1,3 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,10 +55,50 @@
             border-radius: 5px;
         }
 
-        #walletAddress {
-            margin-top: 10px;
-            color: #444;
-            font-weight: bold;
+        #toggleBtn {
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 30px;
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .icon-container {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .fa-sun {
+            color: #ffb300;
+        }
+
+        .fa-moon {
+            color: #3f51b5;
+        }
+
+        .active {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .night-mode {
+            background-color: #333;
+        }
+
+        .night-mode #toggleBtn {
+            background-color: #555;
+        }
+
+        .night-mode .active {
+            background-color: #777;
         }
 
         .button-group {
@@ -68,83 +107,83 @@
             gap: 10px;
         }
 
-        .gtranslate_wrapper{
-            position:absolute;
-            bottom:30px;
-            left: 30px;
-        }
-    </style>
-</head>
-<body>
-    <div class="gtranslate_wrapper"></div>
-    <script>
-      window.gtranslateSettings = {
-        default_language: "en",
-        detect_browser_language: true,
-        wrapper_selector: ".gtranslate_wrapper",
-        flags: true,
-        flag_size:24,
-        font_size:0,
-      };
-    </script>
-    <script
-    src="https://cdn.gtranslate.net/widgets/latest/popup.js"
-    defer
-  ></script>
-    
-
-
-#toggleBtn {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 30px;
-    padding: 5px;
-    cursor: pointer;
+        .header {
     display: flex;
     align-items: center;
-    transition: background-color 0.3s;
 }
 
-.icon-container {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: background-color 0.3s, color 0.3s;
+.logo {
+    width: 120px;                  
+    height: 120px;                 
+    background: linear-gradient(135deg, #4f9a94, #ebc08b); 
+    border-radius: 50%;           
+    display: flex;                 
+    justify-content: center;      
+    align-items: center;          
+    overflow: hidden;  
+    margin-right: 20px;             
 }
 
-.fa-sun {
-    color: #ffb300;
+h1 {
+    margin: 0;                   
+    font-size: 3rem;             
+    display: flex;               
 }
 
-.fa-moon {
-    color: #3f51b5;
+.logo img {
+    max-width: 100%;              
+    height: auto;                  
+    border-radius: 50%;           
 }
 
-.active {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.letter {
+    animation: colorChange 3s infinite; /* Animation for each letter */
 }
 
-.night-mode {
-    background-color: #333;
+/* Keyframes for color change */
+@keyframes colorChange {
+    0% {
+        color: #2c7a73;           /* First color */
+    }
+    33% {
+        color:#c89f6b;           /* Second color */
+    }
+    67% {
+        color: #d85d4d;           /* Third color */
+    }
+    100% {
+        color: #2c7a73;           /* Back to first color */
+    }
 }
 
-.night-mode #toggleBtn {
-    background-color: #555;
+/* Space class */
+.space {
+    display: inline-block;       /* Ensures space is treated as a block */
+    width:60 px;                /* Adjust width for spacing */
 }
 
-.night-mode .active {
-    background-color: #777;
-}
+/* Delay each letter's animation */
+.letter:nth-child(1) { animation-delay: 0s; }
+.letter:nth-child(2) { animation-delay: 0.1s; }
+.letter:nth-child(3) { animation-delay: 0.2s; }
+.letter:nth-child(4) { animation-delay: 0.3s; }
+.letter:nth-child(5) { animation-delay: 0.4s; }
+.letter:nth-child(6) { animation-delay: 0.5s; }
+.letter:nth-child(7) { animation-delay: 0.6s; }
+.letter:nth-child(8) { animation-delay: 0.7s; }
+.letter:nth-child(9) { animation-delay: 0.8s; }
+.letter:nth-child(10) { animation-delay: 0.9s; }
+.letter:nth-child(11) { animation-delay: 1s; }
+.letter:nth-child(12) { animation-delay: 1.1s; }
+.letter:nth-child(13) { animation-delay: 1.2s; }
+.letter:nth-child(14) { animation-delay: 1.3s; }
+.letter:nth-child(15) { animation-delay: 1.4s; }
+.letter:nth-child(16) { animation-delay: 1.5s; }
+.letter:nth-child(17) { animation-delay: 1.6s; }
+.letter:nth-child(18) { animation-delay: 1.7s; }
+
     </style>
 </head>
-<body>
-   
-</head>
-
 <body>
     <button id="toggleBtn">
         <div class="icon-container active" id="sunContainer">
@@ -155,7 +194,36 @@
         </div>
     </button>
 
-    <h1>Welcome to NexTrade</h1>
+    <div class="header">
+    <div class="logo">
+        <img src="nex.webp" alt="NexTrade Logo" width="100" height="100">
+    </div>
+    <h1>
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">m</span>
+        <span class="letter">e</span>
+        <span class="letter">  </span>
+        &nbsp;&nbsp; <!-- Two non-breaking spaces after "Welcome" -->
+        <span class="letter">t</span>
+        <span class="letter">o</span>
+        <span class="letter"> </span>
+        &nbsp;&nbsp; <!-- Two non-breaking spaces after "to" -->
+        <span class="letter">N</span>
+        <span class="letter">e</span>
+        <span class="letter">x</span>
+        <span class="letter">T</span>
+        <span class="letter">r</span>
+        <span class="letter">a</span>
+        <span class="letter">d</span>
+        <span class="letter">e</span>
+    </h1>
+</div>
+</div>
+
 
     <!-- MetaMask Wallet Section -->
     <button id="connectWalletBtn">Connect MetaMask</button>
@@ -182,78 +250,16 @@
     </div>
 
     <script>
-        let web3;
-        let userAccount;
-
-        // Check if MetaMask is installed
-        window.addEventListener('load', async () => {
-            if (typeof window.ethereum !== 'undefined') {
-                web3 = new Web3(window.ethereum);
-                console.log("MetaMask is installed!");
-            } else {
-                alert("Please install MetaMask to use this feature.");
-            }
-        });
-
-        // Connect to MetaMask wallet
-        document.getElementById('connectWalletBtn').addEventListener('click', async () => {
-            try {
-                const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                userAccount = accounts[0];
-                document.getElementById('walletAddress').textContent = `Connected to: ${userAccount}`;
-            } catch (error) {
-                console.error("User denied account access.");
-            }
-        });
-
-        // Handle form submissions
-        document.getElementById('addStockForm').addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const stockName = event.target.name.value;
-            const stockPrice = event.target.price.value;
-            console.log(`Adding Stock: ${stockName}, Price: ${stockPrice}`);
-            alert('Stock added successfully!');
-        });
-
-        document.getElementById('buyStockForm').addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const stockName = event.target.name.value;
-            console.log(`Buying Stock: ${stockName}`);
-            alert('Stock purchased successfully!');
-        });
-
-        // Button actions
-        document.getElementById('viewOwnershipBtn').addEventListener('click', () => {
-            alert('Feature not implemented yet!');
-        });
-
-        document.getElementById('sellStockBtn').addEventListener('click', () => {
-            alert('Feature not implemented yet!');
-        });
         const toggleBtn = document.getElementById('toggleBtn');
         const body = document.body;
         const sunContainer = document.getElementById('sunContainer');
         const moonContainer = document.getElementById('moonContainer');
 
         toggleBtn.addEventListener('click', () => {
-         body.classList.toggle('night-mode');
-         sunContainer.classList.toggle('active');
-         moonContainer.classList.toggle('active');
+            body.classList.toggle('night-mode');
+            sunContainer.classList.toggle('active');
+            moonContainer.classList.toggle('active');
         });
-
-            
     </script>
-    <script>
-        window.embeddedChatbotConfig = {
-        chatbotId: "0-7cUKPHhqckCZ8tKOQGd",
-        domain: "www.chatbase.co"
-        }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="0-7cUKPHhqckCZ8tKOQGd"
-        domain="www.chatbase.co"
-        defer>
-        </script>
 </body>
 </html>
