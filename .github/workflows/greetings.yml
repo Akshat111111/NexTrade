@@ -1,0 +1,27 @@
+on:
+  push:
+    branches: [main]
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Commitment Issues Bot
+        run: echo "GITHUB_ACTOR=YourBotName" >> $GITHUB_ENV
+      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            🎉 Thank you for raising an issue in this repository! 
+            We’ll review and assign it to you soon. 
+            In the meantime, feel free to ⭐ the repo for updates.
+            Stay awesome! 😎
+          pr-message: |
+            🚀 We’re grateful for your pull request and the effort you put into it! 
+            🔍 A maintainer will review it as soon as possible. 
+            We’ll provide feedback if needed and merge it once approved. 
+            Thanks for being an awesome part of our community! 💪
