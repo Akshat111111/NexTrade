@@ -8,6 +8,10 @@ Currently, the platform offers a foundational framework that can be expanded int
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
+## 📈 GitHub Repository Stats
+| 🌟 **Stars** | 🍴 **Forks** | 🐛 **Issues** | 🔔 **Open PRs** | 🔕 **Closed PRs** | 🛠️ **Languages** | ✅ **Contributors** |
+|--------------|--------------|---------------|-----------------|------------------|------------------|------------------|
+| ![GitHub stars](https://img.shields.io/github/stars/Akshat111111/NexTrade) | ![forks](https://img.shields.io/github/forks/Akshat111111/NexTrade) | ![issues](https://img.shields.io/github/issues/Akshat111111/NexTrade?color=32CD32) | ![pull requests](https://img.shields.io/github/issues-pr/Akshat111111/NexTrade?color=FFFF8F) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/Akshat111111/NexTrade?color=20B2AA) | ![Languages](https://img.shields.io/github/languages/count/Akshat111111/NexTrade?color=20B2AA) | ![Contributors](https://img.shields.io/github/contributors/Akshat111111/NexTrade?color=00FA9A) |
 
 ## **🌟Features🌟**
 
