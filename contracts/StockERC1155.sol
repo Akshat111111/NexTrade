@@ -11,6 +11,15 @@ contract StockERC1155 is ERC1155, Ownable {
     uint256 private stockPrice;
     uint256 private constant STOCK_TYPE = 0;
 
+     // Struct to hold stock details
+    struct Stock {
+        uint256 price;
+        uint256 totalSupply;
+        uint256 availableSupply;
+    }
+
+    // Mapping to keep track of stock details
+    mapping(uint256 => Stock) public stocks;
 
     //////////// CONSTRUCTOR ////////////
     // Constructor called when contract is created
@@ -24,6 +33,12 @@ contract StockERC1155 is ERC1155, Ownable {
         totalSupply = _initialSupply;
         availableSupply = _initialSupply;
         stockPrice = _price;
+        // Initialize stock details
+        stocks[STOCK_TYPE] = Stock({
+            price: _price,
+            totalSupply: _initialSupply,
+            availableSupply: _initialSupply
+        });
         _mint(companyOwner, STOCK_TYPE, _initialSupply, "");
     }
 

@@ -266,6 +266,14 @@
         <button type="submit">Buy Stock</button>
     </form>
 
+    <!-- Sell Stock Form -->
+    <form id="sellStockForm">
+        <h2>Sell Stock</h2>
+        <input type="text" name="name" placeholder="Stock Name" required>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+        <button type="submit">Sell Stock</button>
+    </form>
+
     <!-- New Actions -->
     <div class="button-group">
         <button id="viewOwnershipBtn">View Ownership</button>
@@ -311,6 +319,17 @@
             const stockName = event.target.name.value;
             console.log(`Buying Stock: ${stockName}`);
             alert('Stock purchased successfully!');
+        });
+
+        // Handle sell stock form submission
+       document.getElementById('sellStockForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const stockName = event.target.name.value;
+            const quantity = event.target.quantity.value;
+            console.log(`Selling Stock: ${stockName}, Quantity: ${quantity}`);
+    
+    // Here you can add your logic to interact with the blockchain or your backend
+            alert('Stock sold successfully!');
         });
 
         // Button actions

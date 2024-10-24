@@ -69,6 +69,12 @@ contract NexTradeERC1155 {
     function sellCompanyStock(address _company, uint256 _amount) public hasStockContractAndStocks(_company) {
         address stockContractAddress = getCompanyStockContract(_company);
         StockERC1155 stockContract = StockERC1155(stockContractAddress);
+
+         // Check if the seller has enough stock to sell
+        if (stockContract.balanceOf(msg.sender, 0) < _amount) {
+            revert NexTrade__InsufficientStockToSell();
+        }
+        
         stockContract.sellStock(msg.sender, _amount);
         emit StockSold(msg.sender, _amount);
     }
