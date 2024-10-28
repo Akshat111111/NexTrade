@@ -266,6 +266,13 @@
         <button type="submit">Buy Stock</button>
     </form>
 
+     <!-- New Sell Stock Form -->
+     <form id="sellStockForm">
+        <h2>Sell Stock</h2>
+        <input type="text" name="stockName" placeholder="Stock Name" required>
+        <input type="number" name="quantity" placeholder="Quantity to Sell" required>
+        <button type="submit">Sell Stock</button>
+    </form>
     <!-- New Actions -->
     <div class="button-group">
         <button id="viewOwnershipBtn">View Ownership</button>
@@ -312,6 +319,18 @@
             console.log(`Buying Stock: ${stockName}`);
             alert('Stock purchased successfully!');
         });
+
+        // Handle Sell Stock Form submission
+        document.getElementById('sellStockForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const stockName = event.target.stockName.value;
+            const quantity = event.target.quantity.value;
+            // Here you would typically check the user's balance for the stock and proceed with the sale
+            // Simulating a successful sale for demonstration purposes
+            alert(`Successfully sold ${quantity} shares of ${stockName}!`);
+            console.log(`Selling Stock: ${stockName}, Quantity: ${quantity}`);
+        });
+
 
         // Button actions
         document.getElementById('viewOwnershipBtn').addEventListener('click', () => {
