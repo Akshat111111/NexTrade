@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexTrade Portfolio Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Automated Portfolio Management</h1>
+
+        <!-- Portfolio Section -->
+        <div id="portfolio">
+            <input type="text" id="address" placeholder="Enter your Ethereum address">
+            <button onclick="getPortfolio()">View Portfolio</button>
+            <div id="portfolio-data"></div>
+        </div>
+
+        <!-- Add Stock Section -->
+        <div id="add-stock">
+            <h2>Add Stock to Portfolio</h2>
+            <input type="text" id="symbol" placeholder="Stock Symbol">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <input type="number" id="averagePrice" placeholder="Average Price">
+            <button onclick="addStock()">Add Stock</button>
+        </div>
+
+        <!-- Rebalance Section -->
+        <div id="rebalance">
+            <h2>Rebalance Portfolio</h2>
+            <button onclick="rebalancePortfolio()">Rebalance</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
