@@ -123,7 +123,7 @@ Blockchain operates as a chain of blocks, where each block contains transaction 
 Ethereum is a decentralized platform designed for building and deploying **smart contracts** and **decentralized applications (DApps)**. Unlike Bitcoin, Ethereum is not solely a digital currency; it is a programmable blockchain that enables developers to create custom applications.
 
 - **Ethereum Virtual Machine (EVM)**: The EVM is a runtime environment for executing smart contracts on the Ethereum blockchain, providing a sandbox for developers to deploy decentralized applications.
-For more information, download the [How DOes Ethereum Work](user_guide.pdf)
+For more information, download the [How Does Ethereum Work](howdoesethereumwork.pdf)
 ---
 
 ### Smart Contracts Overview
@@ -132,6 +132,49 @@ Smart contracts are self-executing contracts with the terms of the agreement dir
 - **Benefits of Smart Contracts**:
   - **Automation**: Smart contracts automatically execute actions based on specific triggers.
   - **Trustlessness**: They eliminate the need for intermediaries, reducing transaction costs and increasing trust.
+
+# Transaction Lifecycle
+
+## 1. Initiation of a Transaction
+- **Creation**: A user creates a transaction using a wallet or application, specifying the amount and recipient’s address.
+- **Signing**: The transaction is signed with the sender’s private key to ensure authenticity.
+- **Broadcasting**: The signed transaction is broadcast to the blockchain network.
+
+## 2. Transaction Propagation
+- **Node Communication**: Nodes receive the transaction and verify its format and validity.
+- **Transaction Pool (Mempool)**: Valid transactions are stored in the mempool until picked up by miners.
+- **Validation by Nodes**: Each node independently checks that the transaction meets network rules (e.g., sufficient balance).
+
+## 3. Mining and Confirmation
+- **Mining Process**: Miners collect transactions from the mempool and attempt to include them in a new block by solving cryptographic puzzles.
+- **Consensus Mechanisms**: The network reaches agreement on the state of the blockchain (e.g., Proof of Work or Proof of Stake).
+- **Adding to the Blockchain**: Once a block is mined, it is added to the blockchain, and the transactions within it are considered confirmed.
+
+## 4. Transaction Settlement
+- **Recording on the Blockchain**: The transaction is permanently recorded, ensuring immutability.
+- **Immutability of Transactions**: Once confirmed, a transaction cannot be altered or deleted.
+- **Transaction Fee Distribution**: Miners receive fees for processing transactions, incentivizing their participation.
+
+## Post-Transaction Activities
+Here are the post-transaction activities:
+
+- **Transaction Verification**: After confirmation, the transaction can be verified by anyone using the blockchain’s public ledger. Users can check the status and details of their transactions using a block explorer.
+- **Monitoring and Auditing**: Organizations may monitor transactions for compliance, auditing, and fraud prevention. The transparency of blockchain makes it easier to track transaction histories.
+- **Dispute Resolution Mechanisms**: In case of discrepancies or disputes (e.g., double-spending attempts), blockchain networks may have protocols or smart contracts in place to handle such situations.
+
+## Challenges in the Transaction Lifecycle
+Here are the challenges in the transaction lifecycle in Blockchain:
+
+- **Network Congestion**: As user adoption increases, the volume of transactions can lead to congestion, resulting in slower processing times and higher transaction fees.
+- **Limited Throughput**: Many blockchains have a limited number of transactions they can process per second (TPS), which can hinder their ability to handle large-scale applications.
+- **Delay in Transaction Confirmation**: Transactions may take longer to confirm during periods of high network activity, which can be frustrating for users expecting instant transactions.
+- **Inconsistent Times**: Different blockchains have varying confirmation times, which can lead to uncertainty in transaction finality.
+- **51% Attacks**: In proof-of-work systems, if a single entity gains control of more than 50% of the network’s mining power, they could potentially manipulate transactions.
+- **KYC/AML Challenges**: Implementing Know Your Customer (KYC) and Anti-Money Laundering (AML) procedures within decentralized systems can be difficult.
+- **Fragmented Ecosystems**: Different blockchain networks often operate in silos, making it difficult to transfer assets or data between them seamlessly.
+- **Lack of Standardization**: The absence of common standards for interoperability can hinder collaboration between different blockchain systems.
+- **Error-Prone Processes**: Mistakes in sending transactions, such as entering incorrect addresses or amounts, can lead to irreversible losses.
+![Lifecycle of a Transaction](https://media.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flv10927ekqpfpypyhapq.png)
 
 ## **🧾Setup Instructions🧾**
 
