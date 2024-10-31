@@ -194,6 +194,46 @@
     .letter:nth-child(17) { animation-delay: 1.6s; }
     .letter:nth-child(18) { animation-delay: 1.7s; }
 
+    .social-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+    }
+
+   
+    .social-sidebar a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      transition: transform 0.3s; 
+      padding: 5px; 
+    }
+
+    .social-sidebar a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-sidebar img {
+      width: 30px; 
+      height: 30px; 
+      transition: transform 0.3s; 
+    }
+    
+    .social-sidebar a:hover img {
+      transform: scale(1.1); 
+    }
+   
+
     </style>
 </head>
 <body>
@@ -271,6 +311,21 @@
         <button id="viewOwnershipBtn">View Ownership</button>
         <button id="sellStockBtn">Sell Stock</button>
     </div>
+
+    <div class="social-sidebar">
+        <a href="https://github.com/Akshat111111" target="_blank" class="github" title="GitHub">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub">
+        </a>
+
+          <a href="https://www.linkedin.com/in/akshat-sharma11/" target="_blank" class="linkedin" title="LinkedIn">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png" alt="LinkedIn">
+        </a>
+
+        <a href="https://medium.com/@akshat.sharma.pandri" target="_blank" class="medium" title="Medium">
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/medium-monogram.png"  alt="Medium">
+          </a>
+      </div>
+      
 
     <script>
         let web3;
