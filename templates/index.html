@@ -73,6 +73,34 @@
             left: 30px;
         }
 
+        /* Style for the scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 70px;
+  right: 12px;
+  display: none; /* Initially hidden */
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+/* Change color on hover */
+.scroll-top-btn:hover {
+  background-color: black;
+}
+
+/* FontAwesome icon */
+.scroll-top-btn i {
+  font-size: 20px;
+}
+=======
+
         #toggleBtn {
             background-color: #f0f0f0;
             border: none;
@@ -194,6 +222,7 @@
     .letter:nth-child(17) { animation-delay: 1.6s; }
     .letter:nth-child(18) { animation-delay: 1.7s; }
 
+
     .social-sidebar {
       position: fixed;
       top: 50%;
@@ -234,9 +263,14 @@
     }
    
 
+
     </style>
 </head>
 <body>
+    <button id="scrollTopBtn" class="scroll-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <div class="gtranslate_wrapper"></div>
     <script>
       window.gtranslateSettings = {
@@ -248,7 +282,27 @@
         font_size:0,
       };
     </script>
+
+    <script
+    src="https://cdn.gtranslate.net/widgets/latest/popup.js"
+    defer
+  ></script>
+    
+
+<style>
+#toggleBtn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
     <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
+  
 
     <button id="toggleBtn">
         <div class="icon-container active" id="sunContainer">
@@ -394,8 +448,38 @@
         chatbotId: "0-7cUKPHhqckCZ8tKOQGd",
         domain: "www.chatbase.co"
         }
+
+                   // Get the button
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show the button when the user scrolls down 300px from the top
+window.onscroll = function() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// When the user clicks the button, scroll to the top of the document
+scrollTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scrolling effect
+  });
+});
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="0-7cUKPHhqckCZ8tKOQGd"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+  
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="0-7cUKPHhqckCZ8tKOQGd" domain="www.chatbase.co" defer></script>
+
+
 
     <br /><br />
         <link rel="stylesheet" href="visi.css">
@@ -408,5 +492,6 @@
         <script src="./assets/css/visitors.css"></script>
         <script src="visi.js"></script>
         
+
 </body>
 </html>
