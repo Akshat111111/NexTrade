@@ -337,8 +337,8 @@ A big thank you to all the contributors! 🎉
 
 ## Stargazers ❤️
 
-[![Stargazers repo roster for Akshat111111/NexTrade](https://reporoster.com/stars/Akshat111111/NexTrade)](https://github.com/Akshat111111/NexTrade/stargazers)
+[![Stargazers repo roster for Akshat111111/NexTrade](https://reporoster.com/stars/dark/Akshat111111/NexTrade)](https://github.com/Akshat111111/NexTrade/stargazers)
 
 ## Forkers ❤️
 
-[![Forkers repo roster for Akshat111111/NexTrade](https://reporoster.com/forks/Akshat111111/NexTrade)](https://github.com/Akshat111111/NexTrade/network/members)
+[![Forkers repo roster for Akshat111111/NexTrade](https://reporoster.com/forks/dark/Akshat111111/NexTrade)](https://github.com/Akshat111111/NexTrade/network/members)
