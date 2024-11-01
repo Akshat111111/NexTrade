@@ -334,3 +334,11 @@ A big thank you to all the contributors! 🎉
 <a href="https://github.com/Akshat111111/NexTrade/pulse"> <img align="center" src="https://contrib.rocks/image?max=100&repo=Akshat111111/NexTrade" /> </a> 
 
 
+
+## Stargazers ❤️
+
+[![Stargazers repo roster for Akshat111111/NexTrade](https://reporoster.com/stars/Akshat111111/NexTrade)](https://github.com/Akshat111111/NexTrade/stargazers)
+
+## Forkers ❤️
+
+[![Forkers repo roster for Akshat111111/NexTrade](https://reporoster.com/forks/Akshat111111/NexTrade)](https://github.com/Akshat111111/NexTrade/network/members)
