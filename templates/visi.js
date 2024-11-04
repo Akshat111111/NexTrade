@@ -2,8 +2,7 @@
 function getVisitorCount() {
 
     return localStorage.getItem('visitorCount') || 0;
-
-  }
+}
 
 
   // Function to increment and save the count

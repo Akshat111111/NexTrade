@@ -73,34 +73,6 @@
             left: 30px;
         }
 
-        /* Style for the scroll-to-top button */
-.scroll-top-btn {
-  position: fixed;
-  bottom: 70px;
-  right: 12px;
-  display: none; /* Initially hidden */
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 12px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 0px;
-  z-index: 1000;
-  transition: background-color 0.3s;
-}
-
-/* Change color on hover */
-.scroll-top-btn:hover {
-  background-color: black;
-}
-
-/* FontAwesome icon */
-.scroll-top-btn i {
-  font-size: 20px;
-}
-=======
-
         #toggleBtn {
             background-color: #f0f0f0;
             border: none;
@@ -222,14 +194,63 @@
     .letter:nth-child(17) { animation-delay: 1.6s; }
     .letter:nth-child(18) { animation-delay: 1.7s; }
 
+    .social-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+    }
 
-    </style>
+   
+    .social-sidebar a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      transition: transform 0.3s; 
+      padding: 5px; 
+    }
+
+    .social-sidebar a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-sidebar img {
+      width: 30px; 
+      height: 30px; 
+      transition: transform 0.3s; 
+    }
+    
+    .social-sidebar a:hover img {
+      transform: scale(1.1); 
+    }
+
+    .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            font-size: 18px;
+            color: #555;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+   
+</style>
 </head>
 <body>
-    <button id="scrollTopBtn" class="scroll-top-btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <div class="gtranslate_wrapper"></div>
     <script>
       window.gtranslateSettings = {
@@ -241,6 +262,7 @@
         font_size:0,
       };
     </script>
+ profile
 
     <script
     src="https://cdn.gtranslate.net/widgets/latest/popup.js"
@@ -259,9 +281,9 @@
     align-items: center;
     transition: background-color 0.3s;
 }
-
+</style>
+main
     <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
-  
 
     <button id="toggleBtn">
         <div class="icon-container active" id="sunContainer">
@@ -325,8 +347,107 @@
         <button id="sellStockBtn">Sell Stock</button>
     </div>
 
+
+    <div class="social-sidebar">
+        <a href="https://github.com/Akshat111111" target="_blank" class="github" title="GitHub">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub">
+        </a>
+
+          <a href="https://www.linkedin.com/in/akshat-sharma11/" target="_blank" class="linkedin" title="LinkedIn">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png" alt="LinkedIn">
+        </a>
+
+        <a href="https://medium.com/@akshat.sharma.pandri" target="_blank" class="medium" title="Medium">
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/medium-monogram.png"  alt="Medium">
+          </a>
+      </div>
+      
+      <br>
+      <footer class="footer">
+        <span id="copyright"></span> | 
+        <a href="terms.html" target="_blank">Terms of Service</a>
+    </footer>
+
+    
+    <div class="visitor-counter">
+        <div>Visitor Count:</div>
+        <div class="website-counter" id="visitorCount">0</div>
+    </div>
+    
+    
+</main>
+
     
     <div class="side-icons">
+                <!-- Profile Icon -->
+            
+                <a href="./profile.html" class="profile-link" style="display: flex; align-items: center; text-decoration: none;">
+                  <img src="https://i.postimg.cc/NFFmtc9K/xnz-Mst5-V-400x400.jpg" alt="Profile Icon" style="width: 50px; height: 50px; border-radius: 50%; margin-top: -17px;">
+                </a>
+            </li>
+            
+            <style>
+              /* Override the existing hover styles */
+              .navbar-nav .nav-item .profile-link:hover {
+                  background-color: transparent !important; /* Remove background color */
+                  border-radius: 0 !important; /* Reset border radius */
+                  transform: none !important; /* Prevent scaling */
+              }
+            </style>
+            <script>
+              function toggleMenu() {
+                  const menu = document.getElementById('profileMenu');
+                  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+              }
+            
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(event) {
+                  if (!event.target.matches('.profile-icon img')) {
+                      const menu = document.getElementById('profileMenu');
+                      if (menu.style.display === 'block') {
+                          menu.style.display = 'none';
+                      }
+                  }
+              }
+            </script>
+
+            <style>
+              .profile-icon {
+
+          border-radius: 50%;
+          position: relative;
+          margin-left: 20px; /* Adjust space between Login button and Profile icon */
+
+          }
+
+          .dropdown-menu {
+
+          display: none;
+          position: absolute;
+          top: 35px; /* Adjust based on the height of your navbar */
+          right: 0;
+          background-color: white;
+          color: black;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          z-index: 1;
+
+          }
+
+          .dropdown-menu a {
+
+          display: block;
+          padding: 10px 15px;
+          text-decoration: none;
+
+          }
+
+          .dropdown-menu a:hover {
+
+          background-color: #f1f1f1;
+
+          }
+            </style>
         <div class="icon-content">
           <a href="https://github.com" target="_blank" aria-label="GitHub" data-social="github">
             <i class="fab fa-github"></i>
@@ -359,11 +480,12 @@
           </a>
         </div>
         
+        
     <style>
         .side-icons {
     position: fixed;
     right: 20px;
-    top: 30%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -503,6 +625,21 @@
         let web3;
         let userAccount;
 
+
+<footer>
+    <div id="copyright"></div>
+</footer>
+
+<!-- JavaScript to Update Year -->
+<script>
+    // Set the current year dynamically
+    const currentYear = new Date().getFullYear();
+    document.getElementById("copyright").innerHTML = `&copy; ${currentYear} NexTrade. All rights reserved.`;
+</script>
+
+<script>
+      let web3;
+        let userAccount;
         // Check if MetaMask is installed
         window.addEventListener('load', async () => {
             if (typeof window.ethereum !== 'undefined') {
@@ -512,7 +649,6 @@
                 alert("Please install MetaMask to use this feature.");
             }
         });
-
         // Connect to MetaMask wallet
         document.getElementById('connectWalletBtn').addEventListener('click', async () => {
             try {
@@ -523,7 +659,6 @@
                 console.error("User denied account access.");
             }
         });
-
         // Handle form submissions
         document.getElementById('addStockForm').addEventListener('submit', async (event) => {
             event.preventDefault();
@@ -532,73 +667,36 @@
             console.log(`Adding Stock: ${stockName}, Price: ${stockPrice}`);
             alert('Stock added successfully!');
         });
-
         document.getElementById('buyStockForm').addEventListener('submit', async (event) => {
             event.preventDefault();
             const stockName = event.target.name.value;
             console.log(`Buying Stock: ${stockName}`);
             alert('Stock purchased successfully!');
         });
-
         // Button actions
         document.getElementById('viewOwnershipBtn').addEventListener('click', () => {
             alert('Feature not implemented yet!');
         });
-
         document.getElementById('sellStockBtn').addEventListener('click', () => {
             alert('Feature not implemented yet!');
         });
-
         const toggleBtn = document.getElementById('toggleBtn');
         const body = document.body;
         const sunContainer = document.getElementById('sunContainer');
         const moonContainer = document.getElementById('moonContainer');
-
         toggleBtn.addEventListener('click', () => {
          body.classList.toggle('night-mode');
          sunContainer.classList.toggle('active');
          moonContainer.classList.toggle('active');
         });
     </script>
-
     <script>
         window.embeddedChatbotConfig = {
         chatbotId: "0-7cUKPHhqckCZ8tKOQGd",
         domain: "www.chatbase.co"
         }
-
-                   // Get the button
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-// Show the button when the user scrolls down 300px from the top
-window.onscroll = function() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    scrollTopBtn.style.display = "block";
-  } else {
-    scrollTopBtn.style.display = "none";
-  }
-};
-
-// When the user clicks the button, scroll to the top of the document
-scrollTopBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' // Smooth scrolling effect
-  });
-});
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="0-7cUKPHhqckCZ8tKOQGd"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-  
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="0-7cUKPHhqckCZ8tKOQGd" domain="www.chatbase.co" defer></script>
-
-
-
     <br /><br />
         <link rel="stylesheet" href="visi.css">
         <!-- ############### Footer ############### -->
@@ -609,8 +707,10 @@ scrollTopBtn.addEventListener("click", function() {
         <script src="path/to/visitorCounter.js"></script>
         <script src="./assets/css/visitors.css"></script>
         <script src="visi.js"></script>
+
  contribute
         <a href="./contributors.html" id="ourvisionlink">Our Contributors</a>
- main
+
 </body>
 </html>
+
