@@ -1,0 +1,29 @@
+# .github/workflows/close-issues-on-pr-merge.yml
+name: Close Issues on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  close-issues:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close associated issues
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const issueNumbers = context.payload.pull_request.body.match(/#(\\d+)/g);
+            if (issueNumbers) {
+              for (const issue of issueNumbers) {
+                await github.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: parseInt(issue.replace('#', '')),
+                  state: 'closed',
+                });
+              }
+            }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
