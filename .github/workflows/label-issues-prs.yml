@@ -1,0 +1,26 @@
+# .github/workflows/label-issues-prs.yml
+name: Auto Label Issues and PRs
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add labels
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const labels = context.eventName === 'issues' ? ['bug'] : ['review'];
+            await github.issues.addLabels({
+              issue_number: context.payload.issue.number || context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: labels
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
