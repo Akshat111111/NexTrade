@@ -124,6 +124,8 @@
         .header {
     display: flex;
     align-items: center;
+    
+    margin-top: 90px;
         }
 
         .logo {
@@ -295,8 +297,96 @@ main
             <i class="fas fa-moon"></i>
         </div>
     </button>
+ <!-- Navbar Section -->
+ <nav class="navbar">
+  <div class="logoo">
+      <a>NexTrade</a> <!-- Website name as a link to the home page -->
+  </div>
+  <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>  
+      <li><a href="contributors.html" class="nav-link">Contributors</a></li>  
+      <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+  </ul>
+</nav>
+
+<style>
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Space between logo and nav items */
+    align-items: center;  /* Vertically align content */
+    background-color: #4caf50;  /* Dark background for navbar */
+    color: #fff;  /* White text color */
+    padding: 10px 20px;  /* Padding around the navbar */
+    position: fixed;  /* Make the navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure it's on top of other content */
+    max-height: 90px;
+    min-height: 70px;
+}
+
+.navbar .logoo a {
+    font-size: 24px;
+    color: #fff;  /* White text for logo */
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;  /* Remove bullet points */
+    display: flex;  /* Align items in a row */
+    gap: 20px;  /* Space between the links */
+}
+
+.navbar .nav-link {
+    font-size: 18px;
+    color: #fff;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+    padding: 8px 15px;  /* Padding around buttons */
+    border-radius: 5px;  /* Rounded corners for buttons */
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #266728;  /* Darker background on hover */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  /* Stack the elements vertically on smaller screens */
+        align-items: flex-start;  /* Align items to the left */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;  /* Stack the nav items vertically */
+        margin-top: 10px;  /* Add some space below the logo */
+    }
+
+    .navbar .nav-link {
+        font-size: 16px;  /* Smaller font size on mobile */
+        padding: 10px 20px;  /* Larger padding for touch screens */
+        text-align: left;  /* Align text to the left */
+    }
+}
+
+/* Add some margin to the top of the content so it's not hidden under the fixed navbar */
+main {
+    margin-top: 60px;
+}
+
+    </style>
 
     <div class="header">
+      
         <div class="logo">
             <img src="nex.webp" alt="NexTrade Logo" width="100" height="100">
         </div>
