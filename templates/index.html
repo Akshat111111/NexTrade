@@ -9,6 +9,40 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 
     <style>
+
+      
+        /* Circle styles */
+        .circle {
+
+        height: 21px;
+        width: 21px;
+        border-radius: 50%;
+        background-color: #28762b; /* Initial color */
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99999999;
+        transition: transform 0.1s ease-out;
+        animation: colorCycle 2s infinite linear; /* 2 seconds for a full cycle */
+
+        }
+
+        /* Animation for two-color effect */
+        @keyframes colorCycle {
+
+        0% {
+            background-color: #28762b; 
+        }
+        50% {
+            background-color: #4caf50; 
+        }
+        100% {
+            background-color: #28762b;
+        }
+
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
@@ -242,6 +276,50 @@
 </style>
 </head>
 <body>
+
+  <div class="circle-container">
+
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div> 
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+
+  </div>
+
+
+
     <div class="gtranslate_wrapper"></div>
     <script>
       window.gtranslateSettings = {
@@ -1090,6 +1168,52 @@ main {
         <script src="path/to/visitorCounter.js"></script>
         <script src="./assets/css/visitors.css"></script>
         <script src="visi.js"></script>
+
+
+
+
+        <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
+
+  circles.forEach(function (circle) {
+    circle.x = 0;
+    circle.y = 0;
+  });
+
+  window.addEventListener("mousemove", function (e) {
+    coords.x = e.pageX;
+    coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+  });
+
+  function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
+
+    circles.forEach(function (circle, index) {
+      circle.style.left = `${x - 12}px`; // Backticks added for template literals
+      circle.style.top = `${y - 12}px`;  // Backticks added for template literals
+      circle.style.transform = `scale(${(circles.length - index) / circles.length})`; // Backticks added for template literals
+
+      const nextCircle = circles[index + 1] || circles[0];
+      circle.x = x;
+      circle.y = y;
+
+      x += (nextCircle.x - x) * 0.3;
+      y += (nextCircle.y - y) * 0.3;
+    });
+
+    requestAnimationFrame(animateCircles);
+  }
+
+  animateCircles();
+});
+
+</script>
+
+</script>
 
 
 </body>
