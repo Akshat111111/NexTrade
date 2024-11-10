@@ -9,6 +9,40 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 
     <style>
+
+      
+        /* Circle styles */
+        .circle {
+
+        height: 21px;
+        width: 21px;
+        border-radius: 50%;
+        background-color: #28762b; /* Initial color */
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99999999;
+        transition: transform 0.1s ease-out;
+        animation: colorCycle 2s infinite linear; /* 2 seconds for a full cycle */
+
+        }
+
+        /* Animation for two-color effect */
+        @keyframes colorCycle {
+
+        0% {
+            background-color: #28762b; 
+        }
+        50% {
+            background-color: #4caf50; 
+        }
+        100% {
+            background-color: #28762b;
+        }
+
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
@@ -376,6 +410,7 @@
 
 <body>
 
+
     <!-- Poll Pop-up -->
     <div class="popups" id="pollPopup">
       <div class="popups-content">
@@ -460,6 +495,7 @@
   
   
     </script>
+
 
 
     <div class="gtranslate_wrapper"></div>
@@ -625,6 +661,12 @@ main {
     <!-- MetaMask Wallet Section -->
     <button id="connectWalletBtn">Connect MetaMask</button>
     <p id="walletAddress">Not connected</p>
+
+
+    <a href="signup.html">
+      <button id="connectWalletBtn">Signup/Register</button>
+    </a>
+    
 
     <!-- Stock Forms -->
     <form id="addStockForm">
@@ -1006,8 +1048,221 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     /* Slightly stronger shadow in dark mode */
   }
-    </style>
 
+
+  
+    </style>
+ 
+ 
+      <!-- Newsletter pop-up -->
+      <style>
+        .popup-nl {
+      
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1009;
+      
+        }
+      
+        .popup-content-nl {
+      
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            max-width: 800px;
+            height: 450px;
+            width: 700px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      
+        }
+      
+        .close1-btn-nl {
+      
+            width: 20px;
+            cursor: pointer;
+            margin: 18px 10px;
+            position: absolute;
+            top: -4px;
+            right: 12px;
+            font-size: 18px;
+            font-weight: 800;
+      
+        }
+      
+        .popup-left-nl img {
+      
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+      
+        }
+      
+        .popup-right-nl {
+      
+            padding: 20px;
+            width: 50%;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+      
+        }
+      
+        .popup-nl h1 {
+      
+            font-size: 24px;
+            background: linear-gradient(to right, #8bed4d, #5ec313); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+            text-align: center;
+            margin-bottom: 12px;
+            margin-top: 35px;
+      
+        }
+      
+        .h2-nl{
+      
+            font-size: 18px;
+            margin-bottom: 8px;
+            text-align: center;
+            color: #333;
+      
+        }
+      
+        .pop_up-nl {
+      
+            margin-bottom: 15px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #305807, #339a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 12.7px;
+      
+        }
+      
+        .bold{
+      
+            font-size: 13.1px;
+      
+        }
+      
+        input[type="email"] {
+      
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 14px;
+      
+        }
+      
+        .signup-btn1-nl {
+      
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            background: radial-gradient(circle, #82e143, #5c962f);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+      
+        }
+      
+        .signup-btn1-nl:hover {
+      
+            background-color: #ff4aac;
+      
+        }
+      
+        .no-thanks-nl {
+      
+            display: block;
+            margin-top: 10px;
+            color: #888;
+            text-decoration: none;
+            margin-bottom: 15px;
+      
+        }
+      
+        .no-thanks-nl:hover {
+      
+            color: #000000;
+            font-size: 14px;
+      
+        }
+      
+        .terms-nl {
+      
+            margin-top: 15px;
+            font-size: 10px;
+            color: #888;
+      
+        }
+      
+        .terms-nl a {
+      
+            display: inline;
+      
+        }
+      
+        .terms-nl a:hover {
+      
+            text-decoration: underline;
+      
+        }
+      
+        .popup-right-nl p {
+      
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+      
+        }
+      
+      </style>
+
+
+      <div id="popup-nl" class="popup-nl">
+        <div class="popup-content-nl">
+            <div class="popup-left-nl">
+                <img src="newsletterpopup.jpg" alt="finance">
+            </div>
+      
+            <div class="popup-right-nl">
+
+                <a href="# " class="close1-btn-nl close-nl">X</a>
+                <h1>Subscribe to Newsletter</h1>
+                <h2 class="h2-nl">Stay Informed, Stay Ahead!</h2>
+                <p class="pop_up-nl">Join our community of investors, traders, and financial enthusiasts. Get exclusive access to expert market insights, investment tips, stock analysis, trading strategies, and more!</p>
+                <form id="emailForm-nl">
+                    <input type="email" id="email-nl" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn1-nl">Subscribe</button>
+                </form>
+                <a href="#" class="no-thanks-nl close-nl">No thanks</a>
+                <p class="terms-nl" style="white-space: nowrap;">By subscribing to newsletters, you agree to our <br><a href="terms&cond.html">Terms of Service</a> and <a href="privacynotice.html">Privacy Policy</a>.</p>
+
+            </div>
+
+        </div>
+
+
+      </div>
+
+      <script src="newsletterpopup.js"></script>
+      
+       
 
     <script>
         let web3;
@@ -1091,6 +1346,52 @@ main {
         <script src="path/to/visitorCounter.js"></script>
         <script src="./assets/css/visitors.css"></script>
         <script src="visi.js"></script>
+
+
+
+
+        <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
+
+  circles.forEach(function (circle) {
+    circle.x = 0;
+    circle.y = 0;
+  });
+
+  window.addEventListener("mousemove", function (e) {
+    coords.x = e.pageX;
+    coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+  });
+
+  function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
+
+    circles.forEach(function (circle, index) {
+      circle.style.left = `${x - 12}px`; // Backticks added for template literals
+      circle.style.top = `${y - 12}px`;  // Backticks added for template literals
+      circle.style.transform = `scale(${(circles.length - index) / circles.length})`; // Backticks added for template literals
+
+      const nextCircle = circles[index + 1] || circles[0];
+      circle.x = x;
+      circle.y = y;
+
+      x += (nextCircle.x - x) * 0.3;
+      y += (nextCircle.y - y) * 0.3;
+    });
+
+    requestAnimationFrame(animateCircles);
+  }
+
+  animateCircles();
+});
+
+</script>
+
+</script>
 
 
 </body>
