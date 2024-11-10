@@ -1,0 +1,23 @@
+# .github/workflows/comment-on-issue-close.yml
+name: Comment on Issue Close
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on issue close
+        uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.payload.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'This issue has been closed. If you have further questions, feel free to open a new one.'
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

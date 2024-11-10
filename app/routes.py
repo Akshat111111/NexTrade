@@ -22,3 +22,6 @@ def buy_stock():
     stock_name = request.form['name']
     # Add logic to interact with smart contract
     return jsonify({'status': 'Stock purchased successfully'})
+@app.errorhandler(404)
+def error(e):
+    return render_template("error_404.html")
