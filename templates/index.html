@@ -235,20 +235,7 @@
       transform: scale(1.1); 
     }
 
-    .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #f1f1f1;
-            font-size: 18px;
-            color: #555;
-        }
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
+
    
 </style>
 </head>
@@ -365,14 +352,78 @@ main
       </div>
       
       <br>
-      <footer class="footer">
-        <a href='feedback.html'>Feedback</a>
-        <span id="copyright"></span> | 
-        <a href="terms.html" target="_blank">Terms of Service</a>
-        <span id="copyright"></span> | 
-        <a href="./contributors.html" id="ourvisionlink">Our Contributors</a>
-    </footer>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+      <a href="terms.html" class="footer-link">Terms of Service</a>
+      <span class="separator">|</span> <!-- Vertical bar separator -->
+      <p class="footer-text">&copy; 2024 NexTrade. All Rights Reserved.</p>
+  </div>
+</footer>
 
+<style>
+/* Styling for Footer */
+.footer {
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;  /* Vertically align content */
+    background-color: #4caf50;  /* Same background color as the navbar */
+    color: #fff;  /* White text color */
+    padding: 10px 20px;  /* Padding around the footer */
+    position: relative;  /* Keep footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure it stays on top if there's any overlap */
+    max-height: 60px;
+    min-height: 50px;
+}
+
+/* Container for centered footer content */
+.footer .footer-content {
+    display: flex;  /* Use flexbox to align items horizontally */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;  /* Vertically center the items */
+    gap: 20px;  /* Space between the "Terms of Service" link and the copyright text */
+}
+
+/* Styling for the Terms of Service link */
+.footer .footer-link {
+    font-size: 16px;
+    color: #fff;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Styling for the vertical bar separator */
+.footer .separator {
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;  /* Space around the vertical bar */
+}
+
+/* Styling for the footer copyright text */
+.footer .footer-text {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .footer .footer-content {
+        flex-direction: column;  /* Stack the elements vertically on smaller screens */
+        text-align: center;  /* Center the text */
+    }
+
+    .footer .footer-link,
+    .footer .footer-text {
+        font-size: 14px;  /* Slightly smaller font size on mobile */
+    }
+
+    .footer .separator {
+        display: none;  /* Hide the separator on mobile */
+    }
+}
+
+</style>
     
     <div class="visitor-counter">
         <div>Visitor Count:</div>
@@ -629,11 +680,7 @@ main
     <script>
         let web3;
         let userAccount;
-
-
-<footer>
-    <div id="copyright"></div>
-</footer>
+</script>
 
 <!-- JavaScript to Update Year -->
 <script>
