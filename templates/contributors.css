@@ -15,12 +15,12 @@
     font-size: 3em;
     margin-bottom: 20px;
     padding: 10px;
-    color: #fffdff;
-    text-shadow: 1px 1px 2px rgb(42, 15, 217), 0 0 1em rgba(13, 153, 168, 0.617),
-      0 0 0.2em rgba(114, 125, 231, 0.623);
+    color: #2e06fb;
+    text-shadow: 1px 1px 2px rgb(60, 0, 255), 0 0 1em rgba(0, 213, 255, 0.617), 0 0 0.2em rgba(0, 234, 255, 0.623);
+}
     /* border-radius: 20px; */
     /* background-color: rgba(209, 209, 255, 0.8); */
-  }
+  
 
   .theme-switch::before {
     content: "";
@@ -435,7 +435,7 @@
   }
 
   body {
-    background-color: #0895fa;    
+    background-color: #2193b0;    
     overflow-x: hidden;
     margin: 0;
 
