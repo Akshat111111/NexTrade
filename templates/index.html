@@ -124,6 +124,8 @@
         .header {
     display: flex;
     align-items: center;
+    
+    margin-top: 90px;
         }
 
         .logo {
@@ -502,8 +504,96 @@ main
             <i class="fas fa-moon"></i>
         </div>
     </button>
+ <!-- Navbar Section -->
+ <nav class="navbar">
+  <div class="logoo">
+      <a>NexTrade</a> <!-- Website name as a link to the home page -->
+  </div>
+  <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>  
+      <li><a href="contributors.html" class="nav-link">Contributors</a></li>  
+      <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+  </ul>
+</nav>
+
+<style>
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Space between logo and nav items */
+    align-items: center;  /* Vertically align content */
+    background-color: #4caf50;  /* Dark background for navbar */
+    color: #fff;  /* White text color */
+    padding: 10px 20px;  /* Padding around the navbar */
+    position: fixed;  /* Make the navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure it's on top of other content */
+    max-height: 90px;
+    min-height: 70px;
+}
+
+.navbar .logoo a {
+    font-size: 24px;
+    color: #fff;  /* White text for logo */
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;  /* Remove bullet points */
+    display: flex;  /* Align items in a row */
+    gap: 20px;  /* Space between the links */
+}
+
+.navbar .nav-link {
+    font-size: 18px;
+    color: #fff;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+    padding: 8px 15px;  /* Padding around buttons */
+    border-radius: 5px;  /* Rounded corners for buttons */
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #266728;  /* Darker background on hover */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  /* Stack the elements vertically on smaller screens */
+        align-items: flex-start;  /* Align items to the left */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;  /* Stack the nav items vertically */
+        margin-top: 10px;  /* Add some space below the logo */
+    }
+
+    .navbar .nav-link {
+        font-size: 16px;  /* Smaller font size on mobile */
+        padding: 10px 20px;  /* Larger padding for touch screens */
+        text-align: left;  /* Align text to the left */
+    }
+}
+
+/* Add some margin to the top of the content so it's not hidden under the fixed navbar */
+main {
+    margin-top: 60px;
+}
+
+    </style>
 
     <div class="header">
+      
         <div class="logo">
             <img src="nex.webp" alt="NexTrade Logo" width="100" height="100">
         </div>
@@ -572,14 +662,78 @@ main
       </div>
       
       <br>
-      <footer class="footer">
-        <a href='feedback.html'>Feedback</a>
-        <span id="copyright"></span> | 
-        <a href="terms.html" target="_blank">Terms of Service</a>
-        <span id="copyright"></span> | 
-        <a href="./contributors.html" id="ourvisionlink">Our Contributors</a>
-    </footer>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+      <a href="terms.html" class="footer-link">Terms of Service</a>
+      <span class="separator">|</span> <!-- Vertical bar separator -->
+      <p class="footer-text">&copy; 2024 NexTrade. All Rights Reserved.</p>
+  </div>
+</footer>
 
+<style>
+/* Styling for Footer */
+.footer {
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+    align-items: center;  /* Vertically align content */
+    background-color: #4caf50;  /* Same background color as the navbar */
+    color: #fff;  /* White text color */
+    padding: 10px 20px;  /* Padding around the footer */
+    position: relative;  /* Keep footer at the bottom */
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure it stays on top if there's any overlap */
+    max-height: 60px;
+    min-height: 50px;
+}
+
+/* Container for centered footer content */
+.footer .footer-content {
+    display: flex;  /* Use flexbox to align items horizontally */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;  /* Vertically center the items */
+    gap: 20px;  /* Space between the "Terms of Service" link and the copyright text */
+}
+
+/* Styling for the Terms of Service link */
+.footer .footer-link {
+    font-size: 16px;
+    color: #fff;  /* White text color */
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Styling for the vertical bar separator */
+.footer .separator {
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;  /* Space around the vertical bar */
+}
+
+/* Styling for the footer copyright text */
+.footer .footer-text {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .footer .footer-content {
+        flex-direction: column;  /* Stack the elements vertically on smaller screens */
+        text-align: center;  /* Center the text */
+    }
+
+    .footer .footer-link,
+    .footer .footer-text {
+        font-size: 14px;  /* Slightly smaller font size on mobile */
+    }
+
+    .footer .separator {
+        display: none;  /* Hide the separator on mobile */
+    }
+}
+
+</style>
     
     <div class="visitor-counter">
         <div>Visitor Count:</div>
@@ -591,12 +745,34 @@ main
 
     
     <div class="side-icons">
-                <!-- Profile Icon -->
+
+
+            <!-- Profile Icon -->
             
-                <a href="./profile.html" class="profile-link" style="display: flex; align-items: center; text-decoration: none;">
-                  <img src="https://i.postimg.cc/NFFmtc9K/xnz-Mst5-V-400x400.jpg" alt="Profile Icon" style="width: 50px; height: 50px; border-radius: 50%; margin-top: -17px;">
-                </a>
+              <a href="./profile.html" class="profile-link" style="display: flex; align-items: center; text-decoration: none;">
+                  <img id="homeProfileImage" src="https://i.postimg.cc/NFFmtc9K/xnz-Mst5-V-400x400.jpg" 
+                      alt="Profile Icon" 
+                      style="width: 50px; height: 50px; border-radius: 50%; margin-top: -17px;">
+              </a>
             </li>
+
+            <script>
+              
+              document.addEventListener("DOMContentLoaded", function() {
+              // Retrieve the saved avatar from localStorage
+              const savedAvatar = localStorage.getItem("selectedAvatar");
+
+              // If an avatar is saved, update the profile image
+              if (savedAvatar) {
+                  const homeProfileImage = document.getElementById("homeProfileImage");
+                  if (homeProfileImage) {
+                      homeProfileImage.src = savedAvatar;
+                  }
+              }
+            });
+
+            </script>
+            
             
             <style>
               /* Override the existing hover styles */
@@ -836,11 +1012,7 @@ main
     <script>
         let web3;
         let userAccount;
-
-
-<footer>
-    <div id="copyright"></div>
-</footer>
+</script>
 
 <!-- JavaScript to Update Year -->
 <script>
