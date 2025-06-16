@@ -14,12 +14,16 @@ def index():
 def add_stock():
     stock_name = request.form['name']
     stock_price = request.form['price']
+    if not stock_name or not stock_price:
+        return jsonify({'status': 'Missing stock name or price'}), 400
     # Add logic to interact with smart contract
     return jsonify({'status': 'Stock added successfully'})
 
 @app.route('/buy_stock', methods=['POST'])
 def buy_stock():
     stock_name = request.form['name']
+    if not stock_name:
+        return jsonify({'status': 'Missing stock name or price'}), 400
     # Add logic to interact with smart contract
     return jsonify({'status': 'Stock purchased successfully'})
 @app.errorhandler(404)
