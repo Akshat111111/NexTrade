@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+
+# Python egg and packaging
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Logs
+*.log
+
+# Environment variables / secrets
+.env
+.env.*
+
+# SQLite and database files
+*.sqlite3
+*.db
+
+# Cache
+.cache/
+*.pyc
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Testing
+.tox/
+nosetests.xml
+pytest_cache/
+
+# Static / media files (if dynamically generated)
+staticfiles/
+media/
+
+# Custom or project-specific
+*.pkl
+*.h5
+*.csv
+*.json
+
+# Node (if using JS packages)
+node_modules/
+
+# Local config
+config/local_settings.py
