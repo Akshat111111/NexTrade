@@ -1,24 +1,47 @@
-Security Policy
-Supported Versions
-The following versions of Nextrade are currently supported with security updates:
+# 🔐 Security Policy
 
-Version	Supported
-1.x.x	✅ Supported
-0.x.x	❌ Not supported
-Reporting a Vulnerability
-If you discover a security vulnerability in Nextrade, we encourage you to report it as soon as possible. We will investigate all legitimate reports and do our best to quickly fix the issue.
+## 📦 Supported Versions
 
-How to Report
-Please report vulnerabilities by emailing us at nextrade@gmail.com. Include as much detail as possible to help us identify and fix the issue swiftly.
-Do not share the vulnerability publicly until it has been addressed and a patch is available.
-Security Updates
-We will notify users via GitHub releases for any critical security updates.
-Minor security patches will be included in regular updates as needed.
-Security Best Practices
-Make sure to use the latest version of Nextrade for the latest security features and patches.
-Follow password best practices, such as using strong, unique passwords for each account.
-Regularly update your dependencies to the latest versions.
+We currently support the **latest version** of *NexTrade*. Please make sure you're using the most recent release before reporting any security issues.
 
-Acknowledgements
-We appreciate contributions from the community and researchers who help us improve the security  of Nextrade. Thank you for keeping the platform secure for everyone!
+| Version | Supported |
+|---------|-----------|
+| Latest  | ✅         |
+| Older   | ❌         |
 
+## 📃 Reporting a Vulnerability
+
+If you discover a security vulnerability in NexTrade, we strongly encourage you to report it **privately and responsibly**.
+
+### 📬 How to Report
+
+Please contact **nextrade@gmail.com** with the following details:
+- Description of the vulnerability.
+- Steps to reproduce the issue.
+- Potential impact or severity.
+- Any relevant code snippets, logs, or screenshots.
+
+⌛ We will investigate and respond as quickly as possible. Do **not** disclose vulnerabilities publicly before a fix is released.
+
+---
+
+## 🔒 Security Best Practices
+
+If you're deploying or contributing to NexTrade, please consider:
+- **Validating and sanitizing all user inputs.**
+- **Keeping all dependencies up-to-date.**
+- **Using secure authentication and avoiding hard-coded secrets.**
+- **Using HTTPS for all data transfers.**
+
+## 🙌 Acknowledgements
+
+We are grateful for the community’s efforts in reporting vulnerabilities and improving the security of *NexTrade*.
+
+## 📚 Additional Resources
+
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [GitHub Security Best Practices](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability)
+
+---
+
+🙏 Thank you for helping make **NexTrade** more secure! 💙
