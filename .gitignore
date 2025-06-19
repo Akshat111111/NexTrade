@@ -1,0 +1,81 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Packaging
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Databases
+*.sqlite3
+*.db
+
+# Cache
+.cache/
+*.pyc
+
+# Test / Coverage
+.tox/
+pytest_cache/
+nosetests.xml
+.coverage
+coverage.xml
+htmlcov/
+*.cover
+
+# Static/media files (dynamically generated)
+staticfiles/
+media/
+
+# ML/AI
+*.pkl
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.tflite
+*.onnx
+runs/
+checkpoints/
+
+# Node
+node_modules/
+
+# Project-specific
+config/local_settings.py
+
+# Optional: Keep only if you *want* to ignore all CSV/JSON
+# *.csv
+# *.json
