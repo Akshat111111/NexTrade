@@ -1,4 +1,5 @@
 # app/__init__.py
+import logging
 from flask import Flask
 from .config import Config
 
