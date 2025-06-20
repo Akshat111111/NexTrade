@@ -52,3 +52,68 @@ FeedbackPage
 
 }
 
+/* Scroll to top button */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.1);
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke: #333;
+  transition: stroke 0.3s ease;
+}
+
+#scrollToTopBtn:hover .arrow svg {
+  stroke: #3498db;
+}
+
+/* Rotating border */
+.rotating-border {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #3498db;
+  border-right: 2px solid #3498db;
+  animation: rotateBorder 1.2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
